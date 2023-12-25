@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.17)
+
+project(semantic_similarity)
+
+set(CMAKE_CXX_STANDARD 20)
+
+set(CMAKE_PREFIX_PATH "/PATH-TO-QT/bin/qt5/5.15.2/gcc_64/lib/cmake")
+
+find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
+
+add_executable(semantic_similarity main.cpp GUI.cpp GUI.h SemanticSimilarity.cpp SemanticSimilarity.h)
+
+target_link_libraries(semantic_similarity PRIVATE Qt5::Core Qt5::Widgets)
